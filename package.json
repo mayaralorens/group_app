@@ -1,0 +1,21 @@
+{
+ "name": "movie-finder",
+ "version": "1.0.0",
+ "description": "",
+ "main": "main.js",
+ "scripts": {
+  "start": "electron ."
+ },
+ "keywords": [],
+ "author": "",
+ "license": "ISC",
+ "devDependencies": {
+  "electron": "^5.0.13"
+ },
+ "dependencies": {
+  "amplitudejs": "^4.1.0",
+  "electron-builder": "^5.0.3",
+  "electron-packager": "^5.2.0",
+  "uuid": "^3.3.2"
+ }
+}
