@@ -19,19 +19,27 @@
         </div>
       </nav>
   
-      <div class="container">
+      <div class="wrapper">
           <div class="jumbotron">
-            <p>Movie<span>Hunters.</span></p>
-              <h3 class="text-center">Find Movies</h3>
-              <form id="searchForm">
+              <p>Movie<span>Hunters</span></p>
+                <div class="split">
+              <h3 class="wrapper-search">Find Movies</h3>
+              <form id="searchBar">
                   <input type="text" class="form-control" placeholder="Insert Movie Title..." id = "movieSearch" onkeyup="findMovies()" onclick = "findMovies()">
               </form>
+            </div>
           </div>
       </div>
   
       <div class="container">
         <div id="movies" class="row"></div>
       </div>
+      <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src = "script.js"></script>
 </body>
 
 </html>
