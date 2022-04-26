@@ -2,9 +2,6 @@ const electron = require('electron');
 const path = require('path');
 const url = require('url');
 
-// SET ENV
-process.env.NODE_ENV = 'development';
-
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 
 let mainWindow;
@@ -30,11 +27,11 @@ app.on('ready', function(){
   Menu.setApplicationMenu(mainMenu);
 });
 
-// Handle add item window
+// Handle search item window
 function createSearchWindow(){
   searchWindow = new BrowserWindow({
-    width: 300,
-    height:200,
+    width: 500,
+    height:500,
     title:'Insert Movie Title'
   });
   searchWindow.loadURL(url.format({
@@ -51,8 +48,8 @@ function createSearchWindow(){
 // Handle about item window
 function createAboutWindow(){
   aboutWindow = new BrowserWindow({
-    width: 300,
-    height:200,
+    width: 500,
+    height:500,
     title:'About movieHunters'
   });
   aboutWindow.loadURL(url.format({
