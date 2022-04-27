@@ -59,7 +59,7 @@ img{
 .header p span{
     color: var(--orange-shade);
 }
-.search-element{
+.search-input{
     display: block;
 
     padding-right: 52px;
@@ -68,7 +68,7 @@ img{
     
     position: relative;
 }
-.search-element h5{
+.search-input h5{
     font-family: 'Bahiana';
     text-align: center;
     padding-left: 55px;
@@ -79,7 +79,7 @@ img{
     margin-bottom: 32px;
 }
 
-.search-element .form{
+.search-input .form{
     padding: 16px 55px;
     font-size: 20px;
     border: none;
@@ -145,13 +145,13 @@ img{
 .result-container{
     padding: 30px 0;
 }
-.movie-poster img{
+.movie-cover img{
     max-width: 300px;
     margin:auto;
     border: 5px solid var(--orange-shade);
     padding: auto;
 }
-.movie-info{
+.movie-description{
     text-align: center;
     color: #fff;
     padding-top: 50px;
@@ -164,13 +164,13 @@ img{
     font-size: 37px;
     color: var(--orange-shade);
 }
-.movie-misc-info{
+.movie-release-date{
     list-style-type: none;
     display: flex;
     padding: 20px;
 }
 
-.movie-info .rated{
+.movie-description .rates{
     display: inline-block;
     background-color: var(--orange-shade);
     padding: 5px;
@@ -178,39 +178,39 @@ img{
     border-radius: 5px;
     font-weight: 600;
 }
-.movie-info .released{
+.movie-description .release{
     font-size: 15px;
     opacity: 0.9;
    
 }
-.movie-info .writer{
+.movie-description .writer{
     padding: 1px;
     margin: 20px 0;
 }
-.movie-info .type{
+.movie-description .type{
     padding: 1px;
     margin: 20px 0;
 }
 /*It has got to be inline-block*/
-.movie-info .genre{
+.movie-description .genre{
     background-color: var(--light);
     display: inline-block;
     padding: 10px;
     border-radius: 5px;
 }
-.movie-info .plot{
+.movie-description .plot{
     max-width: 400px;
     margin: 1rem auto;
 }
-.movie-info .language{
+.movie-description .language{
     color: var(--orange-shade);
     font-style: italic;
 }
-.movie-info .awards{
+.movie-description .awards{
    font-weight: 200;
     font-size: 15px;
 }
-.movie-info .awards i{
+.movie-description .awards i{
     color: var(--orange-shade);
     margin: 16 px 3px;
     padding: 15px 10px;
@@ -218,26 +218,22 @@ img{
 }
 
 @media(min-width: 600px){
-    .search-element{
-        
-        flex-wrap: wrap;
-    }
-    
+   
     /*Explain it better*/
-    .result-grid{
+    .output{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
     /*Align text and remove top*/
-    .movie-info{
+    .movie-description{
         text-align: left;
         padding-top: 0;
     }
     
-    .movie-info .plot{
+    .movie-description .plot{
         margin-left: 0;
     }
-    .movie-info .writer{
+    .movie-description .writer{
         margin-left: 0;
     }
 }
