@@ -4,6 +4,7 @@
     --dark: #0a0a0a;
     --light: #333131;
     --orange-shade: #f77903;
+    --carrot-orange:#d65002;
 }
 
 /*Explain box sizing*/
@@ -34,11 +35,16 @@ img{
     padding: 0 50px;
 }
 .search-field{
-    background-color: var(--medium);
+    background-color: var(--carrot-orange);
     height: 200px;
     display:block;
     padding: 40px 53px;
    justify-content: center;
+}
+#play {
+    color: var(--orange-shade);
+    padding-right: 22px;
+    font-size: 40px; 
 }
 .header{
     padding: 12px 0;
@@ -63,16 +69,17 @@ img{
     position: relative;
 }
 .search-element h5{
+    font-family: 'Bahiana';
     text-align: center;
     padding-left: 55px;
     margin-right: 10px;
-    font-size: 35px;
+    font-size: 40px;
     color: #fff;
     font-weight: 300;
     margin-bottom: 32px;
 }
 
-.search-element .form-control{
+.search-element .form{
     padding: 16px 55px;
     font-size: 20px;
     border: none;
@@ -148,11 +155,13 @@ img{
     text-align: center;
     color: #fff;
     padding-top: 50px;
+    opacity: 0,5;
+    margin: 10px;
 }
 
 /* movie info stylings */
 .movie-title{
-    font-size: 37px ;
+    font-size: 37px;
     color: var(--orange-shade);
 }
 .movie-misc-info{
@@ -175,7 +184,11 @@ img{
    
 }
 .movie-info .writer{
-    padding: 10px;
+    padding: 1px;
+    margin: 20px 0;
+}
+.movie-info .type{
+    padding: 1px;
     margin: 20px 0;
 }
 /*It has got to be inline-block*/
@@ -201,13 +214,6 @@ img{
     color: var(--orange-shade);
     margin: 16 px 3px;
     padding: 15px 10px;
-
-}
-
-/*Explain media. Content fits the screen perfectly*/
-@media(max-width: 350px){
-    
-   
 
 }
 
