@@ -27,10 +27,10 @@
 
         <!-- Movies Search field -->
         <div class = "search-field">
-            <div class = "search-element">
+            <div class = "search-input">
                 <h5>Search Movies</h5>
                 <br>
-                <input type = "text" class = "form" placeholder="Insert any movie title..." id = "movie-search-box" onkeyup="findMovies()" onclick = "findMovies()">
+                <input type = "text" class = "form" placeholder="Insert any movie title..." id = "find-movie-here" onkeyup="trackMovies()" onclick = "trackMovies()">
 
                 <!--Search list to be displayed-->
                 <div class = "search-list" id = "search-list">
@@ -45,7 +45,7 @@
         <!-- result container -->
         <div class = "container">
             <div class = "result-container">
-                <div class = "result-grid" id = "result-grid">
+                <div class = "output" id = "output">
                    
                 </div>
             </div>
@@ -54,7 +54,7 @@
     </div>
 
 
-    <!-- movie app js -->
-    <script src = "test.js"></script>
+    <!-- Js external file -->
+    <script src = "script.js"></script>
 </body>
 </html>
