@@ -60,16 +60,18 @@ img{
     width: 100%;
     display:block;
 }
+
 .content-wrapper{
     background-color: var(--dark);
 }
 
 /* comment max-width*/
 .content-wrapper .container{
-   max-width: 1500px;
+    max-width: 1500px;
     margin: 0 15px;
-    padding: 0 50px;
+    padding: 0 25px;
 }
+
 .search-field{
     background-color: var(--carrot-orange);
     height: 200px;
@@ -83,10 +85,15 @@ img{
     font-size: 40px; 
 }
 .header{
-    padding: 12px 0;
-    border-bottom: 1px solid var(--light);
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 960px;
+	margin: 0 auto;
+	flex-wrap: wrap;
 }
 .header p{
+    margin: 10px;
     font-family: 'Bahiana';
     font-size: 55px;
     color: #fff;
@@ -95,6 +102,17 @@ img{
 .header p span{
     color: var(--orange-shade);
 }
+.nav__list{
+	display: flex;
+	flex-wrap: wrap;
+}
+.nav_link{
+	padding: 20px 10px;
+    font-family: 'Bahiana';
+    font-size: 40px;
+    color: var(--orange-shade);
+}
+
 .search-input{
     display: block;
 
@@ -252,6 +270,107 @@ img{
     padding: 15px 10px;
 
 }
+.newsletter{
+    background-color: var(--orange-shade);
+}
+.newsletter-c{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.newsletter-info{
+    flex: 1 1 260px;
+    padding-left: 10px;
+}
+.newsletter-info_titulo{
+    font-family: 'Bahiana';
+    font-size: 2.62rem;
+    font-weight: bold;
+}
+.newletter-info_descricao{
+    font-family: 'Bahiana';
+    font-size:1.25rem;
+    font-style: italic;
+}
+.newsletter-form{
+    flex: 2 1 260px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.newsletter-form_input{
+    flex: 3 1 260px;
+    font-size:1.25rem;
+    width: 325px;
+    color: black;
+    font-style: italic;
+    font-family: 'Bahiana';
+    border: 10px solid var(--carrot-orange);
+    padding: 10px;
+    margin: 0px;
+    border-radius: 0px;
+}
+.newsletter-form_submit{
+    flex: 1 1 260px;
+    width: 192px;
+    font-family: 'Bahiana';
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--carrot-orange);
+    color: black;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+}
+
+.footer .box-container{
+    background-color: #0a0a0a;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap:2rem;
+    padding:2rem 9%;
+}
+
+.footer .box-container .box h3{
+    font-family: 'Bahiana';
+    font-size: 2.5rem;
+    color:var(--carrot-orange);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    font-family: 'Bahiana';
+    display: block;
+    font-size: 1.5rem;
+    color:var(--orange-shade);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:white;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right:2rem;
+}
+.footer .credit{
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Bahiana';
+    font-size: 2rem;
+    background: var(--dark);
+    color:#fff;
+    border-top: .1rem solid var(--carrot-orange);
+}
+
+.footer .credit span{
+    color:var(--carrot-orange);
+}
+
 
 @media(min-width: 600px){
    
@@ -272,4 +391,60 @@ img{
     .movie-description .writer{
         margin-left: 0;
     }
+    .newsletter{
+        background-color: var(--orange-shade);
+    }
+    .newsletter-c{
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .newsletter-info{
+        flex: 1 1 260px;
+        padding-left: 10px;
+    }
+    .newsletter-info_titulo{
+        font-family: 'Bahiana';
+        font-size: 2.62rem;
+        font-weight: bold;
+    }
+    .newletter-info_descricao{
+        font-family: 'Bahiana';
+        font-size:1.25rem;
+        font-style: italic;
+    }
+    .newsletter-form{
+        flex: 2 1 260px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .newsletter-form_input{
+        flex: 3 1 260px;
+        font-size:1.25rem;
+        width: 325px;
+        color: black;
+        font-style: italic;
+        font-family: 'Bahiana';
+        border: 10px solid var(--carrot-orange);
+        padding: 10px;
+        margin: 0px;
+        border-radius: 0px;
+    }
+    .newsletter-form_submit{
+        flex: 1 1 260px;
+        width: 192px;
+        font-family: 'Bahiana';
+        font-size: 2.25rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: var(--carrot-orange);
+        color: black;
+        cursor: pointer;
+        border: none;
+        padding: 15px;
+    }
+    
 }
