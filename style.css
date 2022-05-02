@@ -270,6 +270,31 @@ img{
     padding: 15px 10px;
 
 }
+/*index*/
+.movie .row{
+    
+    gap:5.5rem;
+}
+.movie .row .column{
+    padding:1rem;
+    background:#fff;
+    box-shadow: 0 .5rem 1rem var(--carrot-orange);
+    border:.1rem solid var(--orange-shade);
+    border-radius: .5rem;
+    text-align: center;
+    flex:1 1 15rem;
+    position: relative;
+ 
+}
+.movie .row .column img{
+    height:15rem;
+    object-fit: cover;
+    width:100%;
+    border-radius: .5rem;
+  }
+#star{
+    color: #f77903;
+}/*index page*/
 .newsletter{
     background-color: var(--orange-shade);
 }
