@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+ <!-- Required meta tags for the browser -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,32 +16,41 @@
   <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
   <!--Roboto font style-->
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-  <!-- External CSS link -->
+  <!-- External CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!--This div embodies all the other divs displayed before the newsletter section-->
   <div class="content-wrapper">
-    <!-- Header -->
+    <!-- Beginning of Header -->
     <div class="header">
+        <!--Beginning of div container-->
       <div class="container">
+        <!--Inserting play icon for the movieHunters logo-->
         <p><i class="fa fa-play" id="play"></i>Movie<span>Hunters</span></p>
+        <!--End of div container-->
       </div>
+      <!--nav bar-->
       <nav class="nav__list">
           <a href="#home" class="nav_link">Home</a>
           <a href="#movies" class="nav_link">Movies</a>
           <a href="#newsletter" class="nav_link">Newsletter</a>
       </nav>
+      <!--End of header-->
     </div>
+    <!--Beginning of jumbotron for the home page-->
     <div class="jumbotron" id="home">
+        <!--Joker gif for the home page-->
       <img src="gif.gif" class="gif" alt="movie gif">
     </div>
     <br><br>
-    <!-- The four columns -->
     <section class="movie" id="movie">
+    <!-- Four columns grid (twice) --> 
     <div class="row">
       <div class="column">
-        <img src="img/xena.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+        <img src="img/xena.jpg" alt="xena" style="width:100%">
         <div>
           <i class="fas fa-star" id="star"></i>
           <i class="fas fa-star" id="star"></i>
@@ -48,28 +58,29 @@
         </div>
         <a href="#" class="btn">Rent now</a>
       </div>
+      <!--Lines 62-85 were extracted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tab_img_gallery-->
       <div class="column">
-        <img src="img/buffy.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+        <img src="img/buffy.jpg" alt="buffy" style="width:100%">
       </div>
       <div class="column">
-        <img src="img/willy.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+        <img src="img/willy.jpg" alt="free willy" style="width:100%">
       </div>
       <div class="column">
-        <img src="img/avengers.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+        <img src="img/avengers.jpg" alt="avengers" style="width:100%">
       </div>
     </div>
     <div class="row">
       <div class="column">
-        <img src="img/the batman.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+        <img src="img/the batman.jpg" alt="batman" style="width:100%">
       </div>
       <div class="column">
-        <img src="img/tenet.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+        <img src="img/tenet.jpg" alt="tenet" style="width:100%">
       </div>
       <div class="column">
-        <img src="img/ostnb.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+        <img src="img/ostnb.jpg" alt="oitnb" style="width:100%">
       </div>
       <div class="column">
-        <img src="img/home alone.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+        <img src="img/home alone.jpg" alt="home alone" style="width:100%">
       </div>
     </div>
   </section>
