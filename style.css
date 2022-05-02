@@ -1,4 +1,4 @@
-
+/*Root Selector to declare color variables that will be used throughout this file.*/
 :root{
     --medium: #242323;
     --dark: #0a0a0a;
@@ -7,101 +7,81 @@
     --carrot-orange:#d65002;
 }
 
-/*Explain box sizing*/
+/*Setting box-sizing as 'border-box', which means that the width and height properties include 
+not only the content, but also padding and border.
+Setting padding and margin as 0 for the whole file.*/
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+/*Customized 'Roboto' font for the body content and its size as 15px.*/
 body{
     font-family: 'Roboto';
     font-size: 15px;
 }
- 
-/* The grid: Four equal columns that floats next to each other */
+
+/*==================================INDEX PAGE=================================================*/
+/*Play icon: Setting a background color, a size to it and pushing it to the left.*/
+#play {
+    color: var(--orange-shade);
+    padding-right: 22px;
+    font-size: 40px; 
+}
+
+/*Setting a max-width and margin properties.
+Space-evely: Items will have equal space around them.
+The flex-wrap property specifies whether the flexible items should wrap or not, for that reason we set display as flex.*/
+.header{
+    display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	max-width: 960px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+/* The grid: Four equal columns that floats next to each other. 
+Lines 16- 46 were extracted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tab_img_gallery*/
 .column {
     float: left;
     width: 25%;
     padding: 10px;
 }
 
-  /* Style the images inside the grid */
-  .column img {
+/*Cursor type is pointer when hovering the images in the home page.
+  Opacity is set as 0.8 as default.*/
+.column img {
     opacity: 0.8; 
     cursor: pointer; 
-  }
-  .column img:hover {
+}
+/*Opacity changes when hovering images in the gallery in the home page.*/
+.column img:hover {
     opacity: 1;
   }
   
-  /* Clear floats after the columns */
-  .row:after {
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
   }
  
+/*Setting width for gif image in the home page.*/
   .gif {
       width: 100;
   }
-  /* Expanding image text */
-  #imgtext {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: white;
-    font-size: 20px;
-  }
-  
+/*Text decoration for the links set as none, so links are not underlined.*/
 a{
     text-decoration: none;
 }
+
+/*Image tag - elements are dispayed as block and width set as 100%.*/
 img{
     width: 100%;
     display:block;
 }
 
-.content-wrapper{
-    background-color: var(--dark);
-}
-
-/* comment max-width*/
-.content-wrapper .container{
-    max-width: 1500px;
-    margin: 0 15px;
-    padding: 0 25px;
-}
-
-.search-field{
-    background-color: var(--carrot-orange);
-    height: 200px;
-    display:block;
-    padding: 40px 53px;
-   justify-content: center;
-}
-#play {
-    color: var(--orange-shade);
-    padding-right: 22px;
-    font-size: 40px; 
-}
-.header{
-    display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 960px;
-	margin: 0 auto;
-	flex-wrap: wrap;
-}
-.header p{
-    margin: 10px;
-    font-family: 'Bahiana';
-    font-size: 55px;
-    color: #fff;
-    font-weight: bold;
-}
-.header p span{
-    color: var(--orange-shade);
-}
 .nav__list{
 	display: flex;
 	flex-wrap: wrap;
@@ -113,15 +93,53 @@ img{
     color: var(--orange-shade);
 }
 
+/*Background color*/
+.content-wrapper{
+    background-color: var(--dark);
+}
+
+/* Setting padding, margin and a maximum-width property to both content-wrapper and container divs*/
+.content-wrapper .container{
+    max-width: 1500px;
+    margin: 0 15px;
+    padding: 0 25px;
+}
+
+/*============================================MOVIES PAGE===================================================*/
+
+/*Setting background color, height and padding properties within this div.
+  Displaying content in block and centralizing elements.*/
+.search-field{
+    background-color: var(--carrot-orange);
+    height: 200px;
+    display:block;
+    padding: 40px 53px;
+    justify-content: center;
+}
+
+/*Set margin, different font-family from the rest of the body, color and bold effect for p elements 
+  within the header.*/
+.header p{
+    margin: 10px;
+    font-family: 'Bahiana';
+    font-size: 55px;
+    color: #fff;
+    font-weight: bold;
+}
+/*Different color for the span element.*/
+.header p span{
+    color: var(--orange-shade);
+}
+
+/*The list that pops up from the search box will display elements in block.
+The content will be aligned in the center.
+Position relative: it is positioned relative to its normal position.*/
 .search-input{
     display: block;
-
-    padding-right: 52px;
-   
     justify-content: center;
-    
     position: relative;
 }
+/*Changing all h5 elements from the search-input div.*/
 .search-input h5{
     font-family: 'Bahiana';
     text-align: center;
@@ -133,23 +151,35 @@ img{
     margin-bottom: 32px;
 }
 
+/*Setting padding, font-size, width to the field where we insert the movies.
+ Setting font color to the movies we type.*/
 .search-input .form{
     padding: 16px 55px;
     font-size: 20px;
     border: none;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    outline: none;
     color: var(--orange-shade); 
     width: 350px;
 }
-/*Position MUST be relative, otherwise scroll bar changes position when screen is maximized.*/
+/*Set position of the search list as absolute, i.e, 
+ positioned relative to the nearest positioned ancestor. Relative would have been a nice choice too,
+ however an absolute osition provided a more elegant display for the list.
+ Setting a maximum height and overflow (-y: vertical) ith a scroll bar.*/
 .search-list{
     position: absolute;
-    top: 100%;
     max-height: 300px;
     overflow-y: scroll;
+    opacity: 0.9;
 }
+
+/*When hovering the list, opacity changes.*/
+.search-list:hover{
+    opacity: 1;
+}
+
+/*Setting background-color, padding, border and color to the list that is displayed. 
+ Cursor type: grab.*/
 .search-list .search-list-item{
     background-color: var(--medium);
     padding: 10px;
@@ -157,67 +187,79 @@ img{
     color: #fff;
     cursor:grab;
 }
+/*When hovering items in the list, the background color changes.*/
  .search-list-item:hover{
     background-color: var(--orange-shade);
-    opacity: 0.8;
+    
 }
+
+/*Displaying the movie items in the search list as flex, so the movie thumbnail is 
+positioned alongside its title and year of release.
+Aligning items in the center.*/
 .search-list-item{
     
     display:flex;
     align-items: center;
 }
+/*==================================script file===================================*/
+
+/*Setting width and margin-right to the thumbnail img element within this div.*/
 .search-item-thumbnail img{
     width: 50px;
     margin-right: 30px;
 }
+
+/*Changing all h3 from the search-item-info div.*/
 .search-item-info h3{
     font-weight: 500;
     font-size: 15px;
 }
+/*Changing p element from the search-item-info div.*/
 .search-item-info p{
     font-size: 15px;
     font-weight: 600;
     opacity: 0.8;
 }
 
-/* thumbnail */
+/*It changes the scrollbar's width and background-color from the search list.*/
 .search-list::-webkit-scrollbar{
     width: 8px;
+    background-color:var(--orange-shade);
 }
-
-.search-list::-webkit-scrollbar-thumb{
-    background-color: var(--orange-shade);
-    border-radius: 10px;
-}
-
-/* js related class */
+/*Search list is set to none, so when we select a movie from the search list,
+content is displayed and the list is 'hidden'. Without this property, the list remains there.*/
 .hide-search-list{
     display: none;
 }
 
-/* movie result */
+/* Adding some padding to the result-container div (where the movie info is displayed) */
 .result-container{
-    padding: 30px 0;
+    padding: 30px 50px;
 }
+
+/*Establishing a maximum width, margin, padding and border to the movie posters present in the movie-cover div.*/
 .movie-cover img{
     max-width: 300px;
     margin:auto;
     border: 5px solid var(--orange-shade);
     padding: auto;
 }
+/*Setting color, padding, margin and aligning text for the movie information.*/
 .movie-description{
     text-align: center;
     color: #fff;
     padding-top: 50px;
-    opacity: 0,5;
     margin: 10px;
 }
 
-/* movie info stylings */
+                 /* -------------- Movie information syle --------------- */
+
 .movie-title{
     font-size: 37px;
     color: var(--orange-shade);
 }
+
+/*Release date is displayed as a list, so in order to remove those bullete points we set lit-style-type as none.*/
 .movie-release-date{
     list-style-type: none;
     display: flex;
@@ -225,7 +267,7 @@ img{
 }
 
 .movie-description .rates{
-    display: inline-block;
+    display: block;
     background-color: var(--orange-shade);
     padding: 5px;
     margin: 0 15px;
@@ -234,8 +276,7 @@ img{
 }
 .movie-description .release{
     font-size: 15px;
-    opacity: 0.9;
-   
+    opacity: 0.9; 
 }
 .movie-description .writer{
     padding: 1px;
@@ -245,7 +286,7 @@ img{
     padding: 1px;
     margin: 20px 0;
 }
-/*It has got to be inline-block*/
+/*Displaying inline-block, so the element can sit next to other elements.*/
 .movie-description .genre{
     background-color: var(--light);
     display: inline-block;
@@ -264,12 +305,40 @@ img{
    font-weight: 200;
     font-size: 15px;
 }
+
+/*Changing awards icon.*/
 .movie-description .awards i{
     color: var(--orange-shade);
     margin: 16 px 3px;
     padding: 15px 10px;
 
 }
+
+/*Media query: if the width of the window is from 600px on, the divs below will have the following changes.
+However if the width is less than 600px, the ouput and movie info will be displayed differently.*/
+@media(min-width: 600px){
+   
+    /*Grid template auto auto, defines two grids for the layout.*/
+    .output{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    /*Align text and remove top*/
+    .movie-description{
+        text-align: left;
+        padding-top: 0;
+    }
+    
+    .movie-description .plot{
+        margin-left: 0;
+    }
+    .movie-description .writer{
+        margin-left: 0;
+    }
+}
+
+/*===========================================MARCO=======================================*/
 /*index*/
 .movie .row{
     
@@ -294,7 +363,8 @@ img{
   }
 #star{
     color: #f77903;
-}/*index page*/
+    
+}
 .newsletter{
     background-color: var(--orange-shade);
 }
@@ -396,26 +466,6 @@ img{
     color:var(--carrot-orange);
 }
 
-
-@media(min-width: 600px){
-   
-    /*Explain it better*/
-    .output{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    /*Align text and remove top*/
-    .movie-description{
-        text-align: left;
-        padding-top: 0;
-    }
-    
-    .movie-description .plot{
-        margin-left: 0;
-    }
-    .movie-description .writer{
-        margin-left: 0;
-    }
     .newsletter{
         background-color: var(--orange-shade);
     }
@@ -472,4 +522,3 @@ img{
         padding: 15px;
     }
     
-}
