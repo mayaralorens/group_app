@@ -286,6 +286,23 @@ Opacity is set as 0.8 as default.*/
   display: table;
   clear: both;
 }
+h1{
+  color: white;
+  font-family:'bahiana';
+  text-align: center;
+
+}
+h4{
+  color: white;
+  text-align: justify;
+  font-family: 'bahiana';
+ 
+
+}
+.row:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
 .content-wrapper .container{
   max-width: 1500px;
   margin: 0 15px;
@@ -525,8 +542,7 @@ However if the width is less than 600px, the ouput and movie info will be displa
     }
 }
 
-/*===========================================MARCO=======================================*/
-/*index*/
+/*===========================================MARCO about=======================================*/
    @media (min-width : 600px ) {
         .row {
           background-attachment: scroll;
