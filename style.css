@@ -471,5 +471,49 @@ img{
         border: none;
         padding: 15px;
     }
-    
+    h1{
+        color: white;
+        font-family:'bahiana';
+        text-align: center;
+
+    }
+ h4{
+        color: white;
+        text-align: justify;
+        font-family: 'bahiana';
+       
+
+    }
+    .row:hover{
+        opacity: 0.7;
+        cursor: pointer;
+    }
+    @media (min-width : 600px ) {
+        .row {
+          background-attachment: scroll;
+          min-height: 100px;
+        }
+   
+    }
+    .numbers{
+        text-decoration: solid;
+        color: white;
+        text-align: center;
+        font-size:xx-large ;
+        
+      
+    }
+    .row-center{
+        
+   
+        background-color: var(--carrot-orange);
+        display:block;
+        padding: 40px 53px;
+       justify-content: center;
+    }
+    .quarter-section{
+        color: white;
+        float:right;
+       
+    }
 }
