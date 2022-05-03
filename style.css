@@ -88,14 +88,14 @@ for that reason we set display as flex.*/
 }
 
 /*setting padding ,display and gap give space between */
-.movie .row{
+.movie .row01{
   padding: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap:1rem;
+  gap:2rem;
 }
 /*setting the movies card container*/
-.movie .row .column{
+.movie .row01 .column01{
   padding:2rem;
   background:var(--orange-shade);
   box-shadow: 0 .5rem 1rem var(--carrot-orange);
@@ -105,7 +105,7 @@ for that reason we set display as flex.*/
   flex:1 1 15rem;
 }
 /*setting the images and object-fit resized to image inside of container*/
-.movie .row .column img{
+.movie .row01 .column01 .poster{
   height:15rem;
   object-fit: cover;
   width:100%;
@@ -253,6 +253,45 @@ a recurring pattern to be written in a more compact form.*/
 .footer .credit span{
   color:var(--carrot-orange);
 }
+/*==========about page=============================================*/
+img{
+  width: 100%;
+  display:block;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+/*Cursor type is pointer when hovering the images in the home page.
+Opacity is set as 0.8 as default.*/
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+/*Opacity changes when hovering images in the gallery in the home page.*/
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content-wrapper .container{
+  max-width: 1500px;
+  margin: 0 15px;
+  padding: 0 25px;
+}
+
 /*============================================MOVIES PAGE===================================================*/
 
 /*Setting background color, height and padding properties within this div.
@@ -488,7 +527,7 @@ However if the width is less than 600px, the ouput and movie info will be displa
 
 /*===========================================MARCO=======================================*/
 /*index*/
-/*    @media (min-width : 600px ) {
+   @media (min-width : 600px ) {
         .row {
           background-attachment: scroll;
           min-height: 100px;
