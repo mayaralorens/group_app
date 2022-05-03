@@ -90,8 +90,8 @@ for that reason we set display as flex.*/
 /*setting padding ,display and gap give space between */
 .movie .row01{
   padding: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap:2rem;
 }
 /*setting the movies card container*/
@@ -99,14 +99,14 @@ for that reason we set display as flex.*/
   padding:2rem;
   background:var(--orange-shade);
   box-shadow: 0 .5rem 1rem var(--carrot-orange);
-  border:.1rem solid var(--orange-shade);
+  border:0.5rem solid var(--orange-shade);
   border-radius: .5rem;
   text-align: center;
   flex:1 1 15rem;
 }
 /*setting the images and object-fit resized to image inside of container*/
 .movie .row01 .column01 .poster{
-  height:15rem;
+  height:20rem;
   object-fit: cover;
   width:100%;
   border-radius: .5rem;
@@ -571,6 +571,6 @@ However if the width is less than 600px, the ouput and movie info will be displa
         float:right;
        
     }
-
+    
     
 
