@@ -20,91 +20,239 @@ Setting padding and margin as 0 for the whole file.*/
 body{
     font-family: 'Roboto';
     font-size: 15px;
+    background: var(--dark);
 }
 
 /*==================================INDEX PAGE=================================================*/
 /*Play icon: Setting a background color, a size to it and pushing it to the left.*/
-#play {
-    color: var(--orange-shade);
-    padding-right: 22px;
-    font-size: 40px; 
-}
-
-/*Setting a max-width and margin properties.
-Space-evely: Items will have equal space around them.
-The flex-wrap property specifies whether the flexible items should wrap or not, for that reason we set display as flex.*/
-.header{
-    display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	max-width: 960px;
-	margin: 0 auto;
-	flex-wrap: wrap;
-}
-/* The grid: Four equal columns that floats next to each other. 
-Lines 16- 46 were extracted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tab_img_gallery*/
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
-}
-
-/*Cursor type is pointer when hovering the images in the home page.
-  Opacity is set as 0.8 as default.*/
-.column img {
-    opacity: 0.8; 
-    cursor: pointer; 
-}
-/*Opacity changes when hovering images in the gallery in the home page.*/
-.column img:hover {
-    opacity: 1;
-  }
-  
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
- 
 /*Setting width for gif image in the home page.*/
-  .gif {
-      width: 100;
-  }
+.gif {
+    width: 100%;
+}
 /*Text decoration for the links set as none, so links are not underlined.*/
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
-
-/*Image tag - elements are dispayed as block and width set as 100%.*/
-img{
-    width: 100%;
-    display:block;
+/*Different color for the span element and setting font-size.*/
+#play {
+  color: var(--orange-shade);
+  padding-right: 10px;
+  font-size: 40px; 
 }
-
+/* setting the font letter*/
+.heading{
+  font-family: 'Bahiana';
+  text-align: center;
+  font-size: 3.5rem;
+  padding:1rem;
+  color:#fff;
+}
+/*Different color for the span element.*/  
+.heading span{
+  color:var(--orange-shade);
+}
+/*setting the content*/
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+/*Set margin, different font-family from the rest of the body, color and bold effect for p elements 
+within the header.*/
+.header p{
+  margin: 10px;
+  font-family: 'Bahiana';
+  font-size: 55px;
+  color: #fff;
+  font-weight: bold;
+}
+/*setting different color on span element*/
+.header p span{
+  color: var(--orange-shade);
+}
+/*set the Nav links as flex-wrap property specifies whether the flexible items should wrap or not,
+for that reason we set display as flex.*/
 .nav__list{
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
+/* Setting padding, font-family and color font property*/
 .nav_link{
-	padding: 20px 10px;
-    font-family: 'Bahiana';
-    font-size: 40px;
-    color: var(--orange-shade);
+  padding: 20px 10px;
+  font-family: 'Bahiana';
+  font-size: 40px;
+  color: var(--orange-shade);
 }
 
-/*Background color*/
-.content-wrapper{
-    background-color: var(--dark);
+/*setting padding ,display and gap give space between */
+.movie .row{
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1rem;
 }
-
-/* Setting padding, margin and a maximum-width property to both content-wrapper and container divs*/
-.content-wrapper .container{
-    max-width: 1500px;
-    margin: 0 15px;
-    padding: 0 25px;
+/*setting the movies card container*/
+.movie .row .column{
+  padding:2rem;
+  background:var(--orange-shade);
+  box-shadow: 0 .5rem 1rem var(--carrot-orange);
+  border:.1rem solid var(--orange-shade);
+  border-radius: .5rem;
+  text-align: center;
+  flex:1 1 15rem;
 }
-
+/*setting the images and object-fit resized to image inside of container*/
+.movie .row .column img{
+  height:15rem;
+  object-fit: cover;
+  width:100%;
+  border-radius: .5rem;
+}
+/* setting the background star icon*/  
+#star{
+  color: var(--dark);
+}/*setting the backgroung starWhite icon*/
+#starWhite{
+  color: #fff;
+}
+/*setting the color and font letter also change the mouse when hover on it*/
+.btn{
+  background: #fff;
+  display: inline-block;
+  padding:.5rem 2rem;
+  border:.2rem solid var(--dark);
+  color:var(--dark);
+  cursor: pointer;
+  font-family: 'Bahiana';
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  margin-top: 1rem;
+}
+/*it's change the button color when hover the mouse on it*/
+.btn:hover{
+  color: #fff;
+  background:var(--carrot-orange);
+}
+/*setting the background color*/
+.newsletter{
+  background-color: var(--orange-shade);
+}
+/*setting the newsletter content*/
+.newsletter-c{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.newsletter-info{
+  flex: 1 1 260px;
+  padding-left: 10px;
+}
+/*setting the font letter title on newsletter section */
+.newsletter-info_title{
+  font-family: 'Bahiana';
+  font-size: 2.62rem;
+  font-weight: bold;
+}
+/*setting the font letter descrition on newsletter section */
+.newletter-info_descrition{
+  font-family: 'Bahiana';
+  font-size:1.25rem;
+  font-style: italic;
+}
+/*setting the newsletter-form border-radius give a small curves in the cornes.*/
+.newsletter-form{
+  border: 1.5px solid var(--dark);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+/*setting the font letter that will be insert on form*/
+.newsletter-form_input{
+  flex: 3 1 260px;
+  font-size:1.25rem;
+  width: 325px;
+  color: black;
+  font-style: italic;
+  font-family: 'Bahiana';
+  border: 10px solid var(--carrot-orange);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 0px;
+}
+/*setting the fon letter and change the background color  when the mouser houver on it*/
+.newsletter-form_submit{
+  flex: 1 1 260px;
+  width: 192px;
+  font-family: 'Bahiana';
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: var(--carrot-orange);
+  border: none;
+  cursor: pointer;
+  color:var(--dark);
+  padding: 15px;
+}
+/*it's change the color when hover the mouse on it.*/
+.newsletter-form_submit:hover{
+  color: var(--carrot-orange);
+  background: #fff;
+}
+/*setting the footer box
+grid-template-columns: allowing a large number of columns or rows that exhibit 
+a recurring pattern to be written in a more compact form.*/
+.footer .box-container{
+  background-color: #0a0a0a;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap:2rem;
+  padding:2rem 9%;
+}
+/*setting the font letter*/
+.footer .box-container .box h3{
+  font-family: 'Bahiana';
+  font-size: 2.5rem;
+  color:var(--carrot-orange);
+  padding: 1rem 0;
+}
+/*setting the font letter and color and diplay the links as block*/
+.footer .box-container .box a{
+  font-family: 'Bahiana';
+  display: block;
+  font-size: 1.5rem;
+  color:var(--orange-shade);
+  padding: 1rem 0;
+}
+/*setting the icon color and padding*/
+.footer .box-container .box a i{
+  padding-right: .5rem;
+  color:white;
+}
+/*move a slight to the right the link when hover the mouse*/
+.footer .box-container .box a:hover i{
+  padding-right:2rem;
+}
+/*setting the font color background and font letter*/
+.footer .credit{
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Bahiana';
+  font-size: 2rem;
+  background: var(--dark);
+  color:#fff;
+  border-top: .1rem solid var(--carrot-orange);
+}
+/*setting the color font on credit span*/
+.footer .credit span{
+  color:var(--carrot-orange);
+}
 /*============================================MOVIES PAGE===================================================*/
 
 /*Setting background color, height and padding properties within this div.
@@ -340,206 +488,7 @@ However if the width is less than 600px, the ouput and movie info will be displa
 
 /*===========================================MARCO=======================================*/
 /*index*/
-.movie .row{
-    
-    gap:5.5rem;
-}
-.movie .row .column{
-    padding:1rem;
-    background:#fff;
-    box-shadow: 0 .5rem 1rem var(--carrot-orange);
-    border:.1rem solid var(--orange-shade);
-    border-radius: .5rem;
-    text-align: center;
-    flex:1 1 15rem;
-    position: relative;
- 
-}
-.movie .row .column img{
-    height:15rem;
-    object-fit: cover;
-    width:100%;
-    border-radius: .5rem;
-  }
-#star{
-    color: #f77903;
-    
-}
-.newsletter{
-    background-color: var(--orange-shade);
-}
-.newsletter-c{
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 50px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.newsletter-info{
-    flex: 1 1 260px;
-    padding-left: 10px;
-}
-.newsletter-info_titulo{
-    font-family: 'Bahiana';
-    font-size: 2.62rem;
-    font-weight: bold;
-}
-.newletter-info_descricao{
-    font-family: 'Bahiana';
-    font-size:1.25rem;
-    font-style: italic;
-}
-.newsletter-form{
-    flex: 2 1 260px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.newsletter-form_input{
-    flex: 3 1 260px;
-    font-size:1.25rem;
-    width: 325px;
-    color: black;
-    font-style: italic;
-    font-family: 'Bahiana';
-    border: 10px solid var(--carrot-orange);
-    padding: 10px;
-    margin: 0px;
-    border-radius: 0px;
-}
-.newsletter-form_submit{
-    flex: 1 1 260px;
-    width: 192px;
-    font-family: 'Bahiana';
-    font-size: 2.25rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: var(--carrot-orange);
-    color: black;
-    cursor: pointer;
-    border: none;
-    padding: 15px;
-}
-
-.footer .box-container{
-    background-color: #0a0a0a;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    gap:2rem;
-    padding:2rem 9%;
-}
-
-.footer .box-container .box h3{
-    font-family: 'Bahiana';
-    font-size: 2.5rem;
-    color:var(--carrot-orange);
-    padding: 1rem 0;
-}
-
-.footer .box-container .box a{
-    font-family: 'Bahiana';
-    display: block;
-    font-size: 1.5rem;
-    color:var(--orange-shade);
-    padding: 1rem 0;
-}
-
-.footer .box-container .box a i{
-    padding-right: .5rem;
-    color:white;
-}
-
-.footer .box-container .box a:hover i{
-    padding-right:2rem;
-}
-.footer .credit{
-    padding: 2rem;
-    text-align: center;
-    font-family: 'Bahiana';
-    font-size: 2rem;
-    background: var(--dark);
-    color:#fff;
-    border-top: .1rem solid var(--carrot-orange);
-}
-
-.footer .credit span{
-    color:var(--carrot-orange);
-}
-
-    .newsletter{
-        background-color: var(--orange-shade);
-    }
-    .newsletter-c{
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 50px 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .newsletter-info{
-        flex: 1 1 260px;
-        padding-left: 10px;
-    }
-    .newsletter-info_titulo{
-        font-family: 'Bahiana';
-        font-size: 2.62rem;
-        font-weight: bold;
-    }
-    .newletter-info_descricao{
-        font-family: 'Bahiana';
-        font-size:1.25rem;
-        font-style: italic;
-    }
-    .newsletter-form{
-        flex: 2 1 260px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .newsletter-form_input{
-        flex: 3 1 260px;
-        font-size:1.25rem;
-        width: 325px;
-        color: black;
-        font-style: italic;
-        font-family: 'Bahiana';
-        border: 10px solid var(--carrot-orange);
-        padding: 10px;
-        margin: 0px;
-        border-radius: 0px;
-    }
-    .newsletter-form_submit{
-        flex: 1 1 260px;
-        width: 192px;
-        font-family: 'Bahiana';
-        font-size: 2.25rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        background: var(--carrot-orange);
-        color: black;
-        cursor: pointer;
-        border: none;
-        padding: 15px;
-    }
-    
-    h1{
-        color: white;
-        font-family:'bahiana';
-        text-align: center;
-
-    }
- h4{
-        color: white;
-        text-align: justify;
-        font-family: 'bahiana';
-       
-
-    }
-    .row:hover{
-        opacity: 0.7;
-        cursor: pointer;
-    }
-    @media (min-width : 600px ) {
+/*    @media (min-width : 600px ) {
         .row {
           background-attachment: scroll;
           min-height: 100px;
