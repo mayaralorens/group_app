@@ -317,12 +317,18 @@ Opacity is set as 0.8 as default.*/
 }
 
 /* Clear floats after the columns */
+/*.row{
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2rem;
+}*/
+
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 h1 {
   color: white;
   font-family: 'bahiana';
