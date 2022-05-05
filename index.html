@@ -29,8 +29,9 @@
             <p><i class="fa fa-play" id="play"></i>Movie<span>Hunters</span></p>
           </div>
           <nav class="nav__list">
-              <a href="#home" class="nav_link">Home</a>
-              <a href="#movie" class="nav_link">Movies</a>
+			  <a href="movies.html" target="_blank" class="nav_link">Search</a>
+              
+              <a href="#movie" class="nav_link">Top Rated </a>
               <a href="#newsletter" class="nav_link">Newsletter</a>
           </nav>
         </div>
@@ -51,7 +52,7 @@
               <i class="fas fa-star" id="starWhite"></i>
               <i class="fas fa-star" id="starWhite"></i>
             </div>
-            <a href="#" class="btn">Rent now</a>
+            <a href="movies.html" target="_blank" class="btn">Check out more titles!</a>
           </div>
           <div class="column01">
             <img class="poster"src="img/buffy.jpg"alt>
@@ -62,7 +63,7 @@
               <i class="fas fa-star" id="star"></i>
               <i class="fas fa-star" id="starWhite"></i>
             </div>
-            <a href="#" class="btn">Rent now</a>
+            <a href="movies.html" target="_blank" class="btn">Check out more titles!</a>
           </div>
           <div class="column01">
             <img class="poster" src="img/willy.jpg" alt="">
@@ -73,7 +74,7 @@
               <i class="fas fa-star" id="starWhite"></i>
               <i class="fas fa-star" id="starWhite"></i>
             </div>
-            <a href="#" class="btn">Rent now</a>
+            <a href="movies.html" target="_blank" class="btn">Check out more titles!</a>
           </div>
           <div class="column01">
             <img class="poster"src="img/avengers.jpg" alt="">
@@ -84,7 +85,7 @@
               <i class="fas fa-star" id="star"></i>
               <i class="fas fa-star" id="starWhite"></i>
             </div>
-            <a href="#" class="btn">Rent now</a>
+            <a href="movies.html" target="_blank" class="btn">Check out more titles!</a>
           </div>
         </div>
         <div class="row01">
@@ -97,7 +98,7 @@
               <i class="fas fa-star" id="star"></i>
               <i class="fas fa-star" id="star"></i>
             </div>
-            <a href="#" class="btn">Rent now</a>
+            <a href="movies.html" target="_blank" class="btn">Check out more titles!</a>
           </div>
           <div class="column01">
             <img class="poster" src="img/tenet.jpg" alt="">
@@ -108,7 +109,7 @@
               <i class="fas fa-star" id="star"></i>
               <i class="fas fa-star" id="starWhite"></i>
             </div>
-            <a href="#" class="btn">Rent now</a>
+            <a href="movies.html" target="_blank" class="btn">Check out more titles!</a>
           </div>
           <div class="column01">
             <img class="poster" src="img/ostnb.jpg" alt="">
@@ -119,7 +120,7 @@
               <i class="fas fa-star" id="starWhite"></i>
               <i class="fas fa-star" id="starWhite"></i>
             </div>
-            <a href="#" class="btn">Rent now</a>
+            <a href="movies.html" target="_blank" class="btn">Check out more titles!</a>
           </div>
           <div class="column01">
             <img class="poster" src="img/home alone.jpg" alt="">
@@ -130,7 +131,7 @@
               <i class="fas fa-star" id="star"></i>
               <i class="fas fa-star" id="starWhite"></i>
             </div>
-            <a href="#" class="btn">Rent now</a>
+            <a href="movies.html" target="_blank" class="btn">Check out more titles!</a>
           </div>
         </div>
       </section>
@@ -139,10 +140,10 @@
         <div class="newsletter-c">
           <div class="newsletter-info">
             <h2 class="newsletter-info_title">Newsletter</h2>
-            <p class="newletter-info_descrition">Subscribe and stay up to data with<br>News</p>
+            <p class="newletter-info_descrition">Subscribe and stay updated!</p>
             <form action="" class="newsletter-form">
               <input type="text" placeholder="place your email" class="newsletter-form_input">
-              <button type="submit" class="newsletter-form_submit">Sign in</button>
+              <button type="submit" class="newsletter-form_submit" onclick='alertbox();'>Sign in</button>
             </form>
           </div>
           <!--Newsletter-info-->
@@ -154,7 +155,7 @@
           <div class="box">
             <h3>Quick links</h3>
             <a href="#"> <i class="fas fa-chevron-right"></i> Home </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> About </a>
+            <a href="about.html" target="_blank" > <i class="fas fa-chevron-right"></i> About </a>
             <a href="#"> <i class="fas fa-chevron-right"></i> Review </a>
         </div>
     
@@ -185,3 +186,8 @@
      <!--Lines 62-85 were 
       extracted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tab_img_gallery-->
     </html>
+	<script>
+function alertbox(){
+ alert('You are now Subscribed to our newsletter! Get ready for some greatness!');
+}
+</script>

@@ -129,3 +129,7 @@ if (process.env.NODE_ENV !== 'production') {
     ]
   });
 }
+
+function foo(){
+ alert('Your are now a subscriber! Be ready for movieHunters!');
+}
