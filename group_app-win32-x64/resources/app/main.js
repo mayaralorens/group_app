@@ -1,26 +1,29 @@
+//We created this file based on the classes and on this youtube video: https://www.youtube.com/watch?v=kN1Czs0m1SU
+
+//electron variable will require electron
 const electron = require('electron');
+//require the path module
 const path = require('path');
+//require url, which is a core js module
 const url = require('url');
 
-// SET ENV
-process.env.NODE_ENV = 'development';
-
-const {app, BrowserWindow, Menu, ipcMain} = electron;
+//Pulling these objects out of electron
+const { app, BrowserWindow, Menu } = electron;
 
 let mainWindow;
 
-// Listen for app to be ready
-app.on('ready', function(){
-  // Create new window
+//Listen for app to be ready
+app.on('ready', function () {
+  //Create new window once the app is ready. 
   mainWindow = new BrowserWindow({});
-  // Load html in window
+  //Load the html file "index.html" into the mainWindow.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
-    slashes:true
+    slashes: true
   }));
   // Quit app when closed
-  mainWindow.on('closed', function(){
+  mainWindow.on('closed', function () {
     app.quit();
   });
 
@@ -30,54 +33,72 @@ app.on('ready', function(){
   Menu.setApplicationMenu(mainMenu);
 });
 
-// Handle add item window
-function createAddWindow(){
-  addWindow = new BrowserWindow({
-    width: 300,
-    height:200,
-    title:'Add Shopping List Item'
+// Handle createSearch window
+function createSearchWindow() {
+  searchWindow = new BrowserWindow({
+    //Setting widt, height and a title for this window.
+    width: 500,
+    height: 500,
+    title: 'Insert Movie Title'
   });
-  addWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'addWindow.html'),
+  //Load the html file "movies.html" into the searchWindow.
+  searchWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'movies.html'),
     protocol: 'file:',
-    slashes:true
+    slashes: true
   }));
-  // Handle garbage collection
-  addWindow.on('close', function(){
-    addWindow = null;
+  // Garbage collection handle
+  searchWindow.on('close', function () {
+    searchWindow = null;
   });
 }
 
-// Catch item:add
-ipcMain.on('item:add', function(e, item){
-  mainWindow.webContents.send('item:add', item);
-  addWindow.close(); 
-  // Still have a reference to addWindow in memory. Need to reclaim memory (Grabage collection)
-  //addWindow = null;
-});
+// Handle createAbout window
+function createAboutWindow() {
+  aboutWindow = new BrowserWindow({
+    //Setting widt, height and a title for this window.
+    width: 500,
+    height: 500,
+    title: 'About movieHunters'
+  });
+  aboutWindow.loadURL(url.format({
+    //Load the html file "about.html" into the searchWindow.
+    pathname: path.join(__dirname, 'about.html'),
+    protocol: 'file:',
+    slashes: true
+  }));
+  // Handle garbage collection
+  aboutWindow.on('close', function () {
+    aboutWindow = null;
+  });
+}
 
 // Create menu template
-const mainMenuTemplate =  [
+const mainMenuTemplate = [
   // Each object is a dropdown
   {
     label: 'File',
-    submenu:[
+    submenu: [
       {
-        label:'Add Item',
-        click(){
-          createAddWindow();
+        //Search movies label
+        label: 'Search movies',
+        click() {
+          createSearchWindow();
         }
       },
       {
-        label:'Clear Items',
-        click(){
-          mainWindow.webContents.send('item:clear');
+        //About MovieHunters label
+        label: 'About MovieHunters',
+        click() {
+          createAboutWindow();
         }
       },
       {
+        //Quit label
         label: 'Quit',
-        accelerator:process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
-        click(){
+        //shortcut to quit by clicking on ctrl + Q in the keyboard.
+        accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
+        click() {
           app.quit();
         }
       }
@@ -85,26 +106,30 @@ const mainMenuTemplate =  [
   }
 ];
 
-// If OSX, add empty object to menu
-if(process.platform == 'darwin'){
+// If mac, add empty object to menu
+if (process.platform == 'darwin') {
   mainMenuTemplate.unshift({});
 }
 
-// Add developer tools option if in dev
-if(process.env.NODE_ENV !== 'production'){
+// Add developer tools option 
+if (process.env.NODE_ENV !== 'production') {
   mainMenuTemplate.push({
     label: 'Developer Tools',
-    submenu:[
+    submenu: [
       {
         role: 'reload'
       },
       {
         label: 'Toggle DevTools',
-        accelerator:process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
-        click(item, focusedWindow){
+        accelerator: process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
+        click(item, focusedWindow) {
           focusedWindow.toggleDevTools();
         }
       }
     ]
   });
+}
+
+function foo(){
+ alert('Your are now a subscriber! Be ready for movieHunters!');
 }
