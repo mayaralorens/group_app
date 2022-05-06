@@ -316,14 +316,6 @@ Opacity is set as 0.8 as default.*/
   opacity: 1;
 }
 
-/* Clear floats after the columns */
-/*.row{
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  gap: 2rem;
-}*/
-
 .row:after {
   content: "";
   display: table;
